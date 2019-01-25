@@ -26,7 +26,7 @@ public class CrabSize : MonoBehaviour {
     void EatFood(int value) {
         food += value;
         if (food >= sizeIncreaseIntervals[size]) {
-            food = food - sizeIncreaseIntervals[size]
+            food = food - sizeIncreaseIntervals[size];
             IncreaseSize();
         }
     }
