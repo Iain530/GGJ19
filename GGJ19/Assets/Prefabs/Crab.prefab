@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5340548743731910610}
   - component: {fileID: 5340548743731910609}
   - component: {fileID: 3729161688401550094}
+  - component: {fileID: 8738430508003279533}
   m_Layer: 8
   m_Name: Crab
   m_TagString: Untagged
@@ -127,4 +128,18 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &8738430508003279533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5340548743731910608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c5c545e32da0c478326f5e1a17ac8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rb: {fileID: 3729161688401550094}
