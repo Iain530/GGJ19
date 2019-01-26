@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,12 +35,5 @@ public class CrabMovement : MonoBehaviour {
         }
         rb.velocity = velocity * speed;
     }
-    
-    void OnTriggerEnter(Collider other) 
-    {
-        if (other.gameObject.CompareTag ("Pick Up"))
-        {
-            other.gameObject.SetActive (false);
-        }
-    }
+
 }
