@@ -9,9 +9,11 @@ public class CrabMovement : MonoBehaviour {
     public Rigidbody2D rb;
 
     private Vector2 velocity;
+    private Animator ani;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        ani = transform.GetChild(1).GetComponent<Animator>();
     }
 
     void Update() {
@@ -33,7 +35,17 @@ public class CrabMovement : MonoBehaviour {
         if (velocity.magnitude > 0) {
             velocity = velocity / velocity.magnitude;
         }
+
         rb.velocity = velocity * speed;
+
+        // change animation
+        if (velocity.y != 0) {
+            ani.SetInteger("movement", 2);
+        } else if (velocity.x != 0) {
+            ani.SetInteger("movement", 1);
+        } else {
+            ani.SetInteger("movement", 0);
+        }
     }
 
 }
