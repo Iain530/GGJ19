@@ -26,7 +26,7 @@ public class CrabSize : MonoBehaviour {
         transform.localScale = ((Vector3) transform.localScale) + new Vector3(0.5f, 0.5f, 0); 
     }
 
-    void EatFood(int value) {
+    internal void EatFood(int value) {
         food += value;
         if (food >= sizeIncreaseIntervals[size]) {
             food = food - sizeIncreaseIntervals[size];
