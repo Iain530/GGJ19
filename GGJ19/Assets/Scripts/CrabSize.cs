@@ -5,17 +5,21 @@ using UnityEngine;
 
 public class CrabSize : MonoBehaviour {
 
-    public SpriteRenderer sr;
     public Sprite[] sprites;
 
     public int size = 0;
 
-    public int food = 0;
     public int[] sizeIncreaseIntervals;
+    private int food = 0;
+
+    private SpriteRenderer sr;
+    private Hud hud;
 
     void Start() {
         sr = GetComponent<SpriteRenderer>();
-        sr.sprite = sprites[size];
+        // sr.sprite = sprites[size];
+        hud = GameObject.FindWithTag("Hud").GetComponent<Hud>();
+        hud.UpdateHud(food, sizeIncreaseIntervals[size]);
     }
 
     void IncreaseSize() {
@@ -29,6 +33,7 @@ public class CrabSize : MonoBehaviour {
             food = food - sizeIncreaseIntervals[size];
             IncreaseSize();
         }
+        hud.UpdateHud(food, sizeIncreaseIntervals[size]);
     }
 
     int FoodToNextSize() {

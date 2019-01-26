@@ -28,7 +28,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: bb1bb20c52f0745f88aca6909296d3c0, type: 3}
       propertyPath: m_Name
-      value: food_poop_psb
+      value: food_poop_try_anim
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb1bb20c52f0745f88aca6909296d3c0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_BoneTransforms.Array.data[3]
       value: 
       objectReference: {fileID: 1972723202209084415}
+    - target: {fileID: 21200000, guid: bb1bb20c52f0745f88aca6909296d3c0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 297e4b9ea526efb4c8b587f9ae88ccdb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb1bb20c52f0745f88aca6909296d3c0, type: 3}
 --- !u!1 &1972723202208591829 stripped
