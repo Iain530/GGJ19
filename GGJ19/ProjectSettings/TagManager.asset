@@ -17,8 +17,8 @@ TagManager:
   - 
   - Player
   - Wall
-  - "Pickups\x13"
-  - 
+  - Pickups
+  - Enemies
   - 
   - 
   - 
