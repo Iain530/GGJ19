@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 9ac7aace60ac3874f971e6c9b91cc6ad
+guid: ce7e8aed464dc3947934bb44e56352c9
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sand_to_ocean_0
-    21300002: sand_to_ocean_1
-    21300004: sand_to_ocean_2
-    21300006: sand_to_ocean_3
-    21300008: sand_to_ocean_4
-    21300010: sand_to_ocean_5
-    21300012: sand_to_ocean_6
-    21300014: sand_to_ocean_7
-    21300016: sand_to_ocean_8
+    21300000: ocean_to_sand_0
+    21300002: ocean_to_sand_1
+    21300004: ocean_to_sand_2
+    21300006: ocean_to_sand_3
+    21300008: ocean_to_sand_4
+    21300010: ocean_to_sand_5
+    21300012: ocean_to_sand_6
+    21300014: ocean_to_sand_7
+    21300016: ocean_to_sand_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -45,7 +45,7 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -56,7 +56,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sand_to_ocean_0
+      name: ocean_to_sand_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,13 +129,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cbd529eeb6573e498e03f80e0e38cee
+      spriteID: de081d8ed59bb5246a737238d148a713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sand_to_ocean_1
+      name: ocean_to_sand_1
       rect:
         serializedVersion: 2
         x: 512
@@ -149,13 +149,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a24be4b785793e4aa54dfabf8ec4002
+      spriteID: 032312b8a6190e74aa44b53e207d222e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sand_to_ocean_2
+      name: ocean_to_sand_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -169,13 +169,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e18cb87988085f45b8873083dfacfdc
+      spriteID: a70848172bae09d4385e8cb0a31bbf30
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sand_to_ocean_3
+      name: ocean_to_sand_3
       rect:
         serializedVersion: 2
         x: 0
@@ -189,13 +189,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 072bcbbfe975f3a4db9e596518831206
+      spriteID: 5e8f660fb1124594c8f308950736b466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sand_to_ocean_4
+      name: ocean_to_sand_4
       rect:
         serializedVersion: 2
         x: 512
@@ -209,13 +209,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29b350ff89f6ab449a3b8e0637d55549
+      spriteID: 3fb63ee034b9a4c46b261160bce1477e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sand_to_ocean_5
+      name: ocean_to_sand_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -229,13 +229,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bad85a053f6dd84da0a0107da85ab00
+      spriteID: ccfc2d77fb9d6364690dacc96b0ad260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sand_to_ocean_6
+      name: ocean_to_sand_6
       rect:
         serializedVersion: 2
         x: 0
@@ -249,13 +249,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17f612c4daf621e4b8cc85643a30c3e1
+      spriteID: e7041bc3f46624a47951ec4f2c5d9275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sand_to_ocean_7
+      name: ocean_to_sand_7
       rect:
         serializedVersion: 2
         x: 512
@@ -269,13 +269,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 939cb316cb3c7274bbd8d0f1ba508092
+      spriteID: 18cbcd67880ad1440b8efeea20716bf6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sand_to_ocean_8
+      name: ocean_to_sand_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -289,7 +289,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60d10b2454df9ba4684a013b217b68b2
+      spriteID: 6e84bfac4f23cfa45bb74dea23f94a90
       vertices: []
       indices: 
       edges: []
@@ -297,7 +297,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 514241147d8a4194899538e5b946d107
+    spriteID: f49c210ef97824348b1ec194d0ba0906
     vertices: []
     indices: 
     edges: []
