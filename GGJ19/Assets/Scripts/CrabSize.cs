@@ -5,26 +5,25 @@ using UnityEngine;
 
 public class CrabSize : MonoBehaviour {
 
-    public Sprite[] sprites;
-
     public int size = 0;
 
     public int[] sizeIncreaseIntervals;
     private int food = 0;
 
-    private SpriteRenderer sr;
     private Hud hud;
 
     void Start() {
-        sr = GetComponent<SpriteRenderer>();
-        // sr.sprite = sprites[size];
         hud = GameObject.FindWithTag("Hud").GetComponent<Hud>();
         hud.UpdateHud(food, sizeIncreaseIntervals[size]);
     }
 
+    void Update() {
+        
+    }
+
     void IncreaseSize() {
         size++;
-        sr.sprite = sprites[size];
+        transform.localScale = ((Vector3) transform.localScale) + new Vector3(0.5f, 0.5f, 0); 
     }
 
     void EatFood(int value) {
