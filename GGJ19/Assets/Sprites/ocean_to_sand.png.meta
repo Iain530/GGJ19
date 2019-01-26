@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 guid: ce7e8aed464dc3947934bb44e56352c9
 TextureImporter:
@@ -17,6 +18,11 @@ guid: d32a93fac9f1743b18c230d666ced1a4
 TextureImporter:
   fileIDToRecycleName: {}
 >>>>>>> 5591976b2a2f591e9dcc22bee221d5dd9f7bdcbb
+=======
+guid: 5d2ac2aa7a226cc4f9a63f6a792eaf05
+TextureImporter:
+  fileIDToRecycleName: {}
+>>>>>>> Stashed changes
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -55,20 +61,28 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   spriteMode: 2
 =======
   spriteMode: 1
 >>>>>>> 5591976b2a2f591e9dcc22bee221d5dd9f7bdcbb
+=======
+  spriteMode: 1
+>>>>>>> Stashed changes
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   spritePixelsToUnits: 512
 =======
   spritePixelsToUnits: 100
 >>>>>>> 5591976b2a2f591e9dcc22bee221d5dd9f7bdcbb
+=======
+  spritePixelsToUnits: 100
+>>>>>>> Stashed changes
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -92,6 +106,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   - serializedVersion: 2
     buildTarget: Standalone
@@ -314,14 +329,20 @@ TextureImporter:
     bones: []
     spriteID: f49c210ef97824348b1ec194d0ba0906
 =======
+=======
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
+<<<<<<< Updated upstream
     spriteID: 8f61fb72c851242dd8456e151df663db
 >>>>>>> 5591976b2a2f591e9dcc22bee221d5dd9f7bdcbb
+=======
+    spriteID: 6bc9df2091c52c5498412d0c38901d06
+>>>>>>> Stashed changes
     vertices: []
     indices: 
     edges: []
