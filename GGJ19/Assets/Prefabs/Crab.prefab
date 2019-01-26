@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 5701920939728028671}
   m_Layer: 8
   m_Name: Crab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,7 +378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b53ac6251658b4aa0f4b9c7aae8fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
   size: 0
   sizeIncreaseIntervals: 320000001e0000000a000000
 --- !u!95 &5701920939728028671
