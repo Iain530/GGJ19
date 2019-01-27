@@ -20,7 +20,7 @@ public class CrabSize : MonoBehaviour {
     public AudioSource run;
     public AudioSource pickup;
 
-    public static float growStep = 1.427f;
+    public static float growStep = 1.25f;
 
     void Start() {
         hud = GameObject.FindWithTag("Hud").GetComponent<Hud>();
@@ -73,7 +73,7 @@ public class CrabSize : MonoBehaviour {
     public void SetShell(CollectShell shell) {
         this.shell = shell;
         run.Stop();
-        walk.Play();
+        walk.PlayDelayed(1.5f);
         pickup.Play();
     }
 }
