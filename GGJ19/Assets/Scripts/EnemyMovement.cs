@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public GameObject Player;
+    private GameObject _player;
 
 
     
@@ -22,13 +22,14 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _player = GameObject.Find("Crab");
         _rb = GetComponent<Rigidbody2D>();
-        _crabHealth = Player.GetComponent<CrabHealth>();
+        _crabHealth = _player.GetComponent<CrabHealth>();
     }
 
     void Update()
     {
-        float dist = Vector2.Distance(Player.transform.position, transform.position);
+        float dist = Vector2.Distance(_player.transform.position, transform.position);
         if (!_aggro)
         {
                         
@@ -65,7 +66,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (_aggro)
         {
-            Vector2 toTarget = Player.transform.position - transform.position;
+            Vector2 toTarget = _player.transform.position - transform.position;
             transform.Translate(toTarget * 0.8f * Time.deltaTime);
             return;
         }
