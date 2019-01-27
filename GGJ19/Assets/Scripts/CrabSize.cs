@@ -11,19 +11,25 @@ public class CrabSize : MonoBehaviour {
     private int food = 0;
 
     private Hud hud;
+    private CollectShell shell;
 
     void Start() {
         hud = GameObject.FindWithTag("Hud").GetComponent<Hud>();
         hud.UpdateHud(food, sizeIncreaseIntervals[size]);
     }
 
-    void Update() {
-        
+
+    public bool HasShell() {
+        return shell != null;
     }
 
     void IncreaseSize() {
         size++;
-        transform.localScale = ((Vector3) transform.localScale) + new Vector3(0.5f, 0.5f, 0); 
+        transform.localScale = ((Vector3) transform.localScale) + new Vector3(0.5f, 0.5f, 0);
+        if (shell) {
+            shell.Drop();
+            shell = null;
+        }
     }
 
     internal void EatFood(int value) {
@@ -37,5 +43,9 @@ public class CrabSize : MonoBehaviour {
 
     int FoodToNextSize() {
         return sizeIncreaseIntervals[size];
+    }
+
+    public void SetShell(CollectShell shell) {
+        this.shell = shell;
     }
 }
