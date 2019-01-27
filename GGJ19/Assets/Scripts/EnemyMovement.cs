@@ -9,13 +9,13 @@ public class EnemyMovement : MonoBehaviour
     private GameObject _player;
 
 
-    
+
     public float accelerationTime = 2f;
     public float maxSpeed = 1f;
     private Rigidbody2D _rb;
     private Vector2 _movement;
     private float _timeLeft;
-    private float _aggroTime = 10; 
+    private float _aggroTime = 10;
     private bool _aggro = false;
     private CrabHealth _crabHealth;
 
@@ -32,26 +32,26 @@ public class EnemyMovement : MonoBehaviour
         float dist = Vector2.Distance(_player.transform.position, transform.position);
         if (!_aggro)
         {
-                        
+
             if (dist < 10) _aggro = true;
-            
+
             _timeLeft -= Time.deltaTime;
             if (_timeLeft >= 0) return;
 
             _movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             _timeLeft += accelerationTime;
 
-            
-            
-            
+
+
+
         }
         else
         {
-            if (dist < 1)
+            if (dist < 2)
             {
                 _crabHealth.UpdateHealth(_crabHealth.health - 1);
             }
-            
+
             _aggroTime -= Time.deltaTime;
             if (_timeLeft >= 0)
             {

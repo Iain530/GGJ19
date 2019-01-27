@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 6316971117845166430}
   - component: {fileID: 3618160710126833973}
   - component: {fileID: 1652737501507874349}
+  - component: {fileID: 3553037930443202636}
   m_Layer: 8
   m_Name: Crab
   m_TagString: Player
@@ -776,6 +777,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3553037930443202636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5340548743731910608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f0ebe518d71d5f693cde09747151c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1001 &1625725462990481215
 PrefabInstance:
   m_ObjectHideFlags: 0
