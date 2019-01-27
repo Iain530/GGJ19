@@ -12,7 +12,7 @@ public class CollectShell : MonoBehaviour
 
 void Awake(){
     for(int i = 0; i < fittingSize; i++)
-        transform.localScale = transform.localScale*1.427f;
+        transform.localScale = transform.localScale*CrabSize.growStep;
 }
     void Update()
     {

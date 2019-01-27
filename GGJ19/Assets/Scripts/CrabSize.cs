@@ -20,6 +20,8 @@ public class CrabSize : MonoBehaviour {
     public AudioSource run;
     public AudioSource pickup;
 
+    public static float growStep = 1.427f;
+
     void Start() {
         hud = GameObject.FindWithTag("Hud").GetComponent<Hud>();
         hud.UpdateHud(food, sizeIncreaseIntervals[size]);
@@ -40,7 +42,7 @@ public class CrabSize : MonoBehaviour {
         size++;
         // transform.localScale = ((Vector3) transform.localScale) + new Vector3(0.5f, 0.5f, 0);
         // targetSize += new Vector3(0.5f,0.5f,0);
-        targetSize*=1.427f;
+        targetSize*=growStep;
         if (shell) {
             shell.Drop();
             walk.Stop();
