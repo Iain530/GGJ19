@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Pick Up
   - Enemy
+  - Hud
+  - Shell
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Wall
   - Pickups
   - Enemies
-  - 
+  - Minimap
   - 
   - 
   - 

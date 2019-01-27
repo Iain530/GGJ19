@@ -23,6 +23,7 @@ public class ItemPickup : MonoBehaviour
         
         if (other.gameObject.CompareTag ("Player"))
         {
+            other.gameObject.GetComponent<CrabSize>().EatFood(10);
             this.gameObject.SetActive (false);
         }
     }
