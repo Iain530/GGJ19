@@ -9,11 +9,18 @@ public class CrabMovement : MonoBehaviour {
     public Rigidbody2D rb;
 
     private Vector2 velocity;
-    private Animator ani;
+    private Animator ani, anihead;
+
+    private float noShellSpeed = 1.3f;
+    private CrabSize size;
+    private ParticleSystem particles;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        size = GetComponent<CrabSize>();
         ani = transform.GetChild(1).GetComponent<Animator>();
+        anihead = transform.GetChild(1).GetComponentInChildren<Animator>();
+        particles = transform.GetChild(3).GetComponent<ParticleSystem>();
     }
 
     void Update() {
@@ -36,15 +43,21 @@ public class CrabMovement : MonoBehaviour {
             velocity = velocity / velocity.magnitude;
         }
 
-        rb.velocity = velocity * speed;
+        rb.velocity = velocity * speed * (size.HasShell() ? 1f : noShellSpeed);
 
         // change animation
         if (velocity.y != 0) {
             ani.SetInteger("movement", 2);
+            anihead.SetInteger("movement",2);
+            particles.Play();
         } else if (velocity.x != 0) {
             ani.SetInteger("movement", 1);
+            anihead.SetInteger("movement",1);
+            particles.Play();
         } else {
             ani.SetInteger("movement", 0);
+            anihead.SetInteger("movement",0);
+            particles.Pause();
         }
     }
 

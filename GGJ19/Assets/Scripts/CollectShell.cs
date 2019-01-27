@@ -5,17 +5,15 @@ using UnityEngine;
 public class CollectShell : MonoBehaviour
 {
     public GameObject target;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    private bool dropped = false;
 
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.position = target.transform.position;
+        if (target && !dropped) {
+            this.gameObject.transform.position = target.transform.position;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -24,6 +22,12 @@ public class CollectShell : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             target = GameObject.FindGameObjectWithTag("Player");
+            target.GetComponent<CrabSize>().SetShell(this);
         }
+    }
+
+    public void Drop() {
+        dropped = true;
+        transform.eulerAngles = new Vector3(0, 0, 180f);
     }
 }
