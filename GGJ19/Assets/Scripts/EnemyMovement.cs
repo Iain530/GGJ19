@@ -17,11 +17,13 @@ public class EnemyMovement : MonoBehaviour
     private float _timeLeft;
     private float _aggroTime = 10; 
     private bool _aggro = false;
+    private CrabHealth _crabHealth;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _crabHealth = Player.GetComponent<CrabHealth>();
     }
 
     void Update()
@@ -44,6 +46,11 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
+            if (dist < 1)
+            {
+                _crabHealth.UpdateHealth(_crabHealth.health - 1);
+            }
+            
             _aggroTime -= Time.deltaTime;
             if (_timeLeft >= 0)
             {
