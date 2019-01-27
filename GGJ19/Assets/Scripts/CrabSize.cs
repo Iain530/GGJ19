@@ -13,9 +13,12 @@ public class CrabSize : MonoBehaviour {
     private Hud hud;
     private CollectShell shell;
 
+    private Camera camera;
+
     void Start() {
         hud = GameObject.FindWithTag("Hud").GetComponent<Hud>();
         hud.UpdateHud(food, sizeIncreaseIntervals[size]);
+        camera = transform.GetChild(0).GetComponent<Camera>();
     }
 
 
@@ -37,8 +40,14 @@ public class CrabSize : MonoBehaviour {
         if (food >= sizeIncreaseIntervals[size]) {
             food = food - sizeIncreaseIntervals[size];
             IncreaseSize();
+            expandViewPort();
         }
         hud.UpdateHud(food, sizeIncreaseIntervals[size]);
+    }
+
+
+    private void expandViewPort() {
+        camera.orthographicSize += 2.0f;
     }
 
     int FoodToNextSize() {
