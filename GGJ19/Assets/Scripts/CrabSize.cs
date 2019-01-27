@@ -14,13 +14,22 @@ public class CrabSize : MonoBehaviour {
     private CollectShell shell;
 
     private Camera camera;
+    private float targetViewport;
+
+    private Vector3 targetSize;
 
     void Start() {
         hud = GameObject.FindWithTag("Hud").GetComponent<Hud>();
         hud.UpdateHud(food, sizeIncreaseIntervals[size]);
         camera = transform.GetChild(0).GetComponent<Camera>();
+        targetViewport = camera.orthographicSize;
+        targetSize = transform.localScale;
     }
 
+    void Update(){
+        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, targetViewport, Time.deltaTime/(Mathf.Abs(camera.orthographicSize-targetViewport)));
+        transform.localScale = Vector3.Lerp(transform.localScale, targetSize, Time.deltaTime*Vector3.Distance(targetSize, transform.localScale));
+    }
 
     public bool HasShell() {
         return shell != null;
@@ -28,7 +37,8 @@ public class CrabSize : MonoBehaviour {
 
     void IncreaseSize() {
         size++;
-        transform.localScale = ((Vector3) transform.localScale) + new Vector3(0.5f, 0.5f, 0);
+        // transform.localScale = ((Vector3) transform.localScale) + new Vector3(0.5f, 0.5f, 0);
+        targetSize += new Vector3(0.5f,0.5f,0);
         if (shell) {
             shell.Drop();
             shell = null;
@@ -47,7 +57,7 @@ public class CrabSize : MonoBehaviour {
 
 
     private void expandViewPort() {
-        camera.orthographicSize += 2.0f;
+        targetViewport += 2.0f;
     }
 
     int FoodToNextSize() {
