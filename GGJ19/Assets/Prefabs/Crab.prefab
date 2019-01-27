@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 0
-  sizeIncreaseIntervals: 320000001e0000000a000000
+  sizeIncreaseIntervals: 320000003200000032000000
   walk: {fileID: 6316971117845166430}
   run: {fileID: 3618160710126833973}
   pickup: {fileID: 1652737501507874349}
