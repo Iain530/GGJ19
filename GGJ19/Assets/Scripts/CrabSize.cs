@@ -40,13 +40,14 @@ public class CrabSize : MonoBehaviour {
         if (food >= sizeIncreaseIntervals[size]) {
             food = food - sizeIncreaseIntervals[size];
             IncreaseSize();
+            expandViewPort();
         }
         hud.UpdateHud(food, sizeIncreaseIntervals[size]);
     }
 
 
     private void expandViewPort() {
-        camera.orthographicSize += 5.0f;
+        camera.orthographicSize += 2.0f;
     }
 
     int FoodToNextSize() {
