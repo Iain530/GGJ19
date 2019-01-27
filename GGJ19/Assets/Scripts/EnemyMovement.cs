@@ -8,8 +8,6 @@ public class EnemyMovement : MonoBehaviour
 {
     private GameObject _player;
 
-
-
     public float accelerationTime = 2f;
     public float maxSpeed = 1f;
     private Rigidbody2D _rb;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimerBar : MonoBehaviour
 {
@@ -30,6 +31,6 @@ public class TimerBar : MonoBehaviour
     }
 
     public static void OnTimeOut(){
-        Destroy(Camera.main.gameObject);
+        SceneManager.LoadScene(2);
     }
 }
