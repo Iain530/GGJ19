@@ -17,6 +17,8 @@ public class CrabSize : MonoBehaviour {
     private float targetViewport;
 
     private Vector3 targetSize;
+    public AudioSource walk;
+    public AudioSource run;
 
     void Start() {
         hud = GameObject.FindWithTag("Hud").GetComponent<Hud>();
@@ -41,6 +43,8 @@ public class CrabSize : MonoBehaviour {
         targetSize += new Vector3(0.5f,0.5f,0);
         if (shell) {
             shell.Drop();
+            walk.Stop();
+            run.Play();
             shell = null;
         }
     }
@@ -66,5 +70,7 @@ public class CrabSize : MonoBehaviour {
 
     public void SetShell(CollectShell shell) {
         this.shell = shell;
+        run.Stop();
+        walk.Play();
     }
 }
