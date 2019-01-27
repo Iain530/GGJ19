@@ -5,10 +5,15 @@ using UnityEngine;
 public class CollectShell : MonoBehaviour
 {
     public GameObject target;
+    public int fittingSize = 1;
     public AudioSource pickup;
     private bool dropped = false;
 
-    // Update is called once per frame
+
+void Awake(){
+    for(int i = 0; i < fittingSize; i++)
+        transform.localScale = transform.localScale*1.427f;
+}
     void Update()
     {
         if (target && !dropped) {
@@ -18,11 +23,16 @@ public class CollectShell : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.gameObject.CompareTag("Player"))
         {
-            target = GameObject.FindGameObjectWithTag("Player");
-            target.GetComponent<CrabSize>().SetShell(this);
+            CrabSize component = GameObject.FindGameObjectWithTag("Player").GetComponent<CrabSize>();
+
+            Debug.Log("QQQQQ " + component.size + " " + fittingSize);
+
+            if((component.size == fittingSize) && (component.HasShell()==false)){
+                component.SetShell(this);
+                target = GameObject.FindGameObjectWithTag("Player");
+            }
         }
     }
 

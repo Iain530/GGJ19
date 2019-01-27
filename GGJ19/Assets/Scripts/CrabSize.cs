@@ -9,7 +9,6 @@ public class CrabSize : MonoBehaviour {
 
     public int[] sizeIncreaseIntervals;
     private int food = 0;
-
     private Hud hud;
     private CollectShell shell;
 
@@ -31,17 +30,17 @@ public class CrabSize : MonoBehaviour {
 
     void Update(){
         camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, targetViewport, Time.deltaTime/(Mathf.Abs(camera.orthographicSize-targetViewport)));
-        transform.localScale = Vector3.Lerp(transform.localScale, targetSize, Time.deltaTime*Vector3.Distance(targetSize, transform.localScale));
+        transform.localScale = Vector3.Lerp(transform.localScale, targetSize, Time.deltaTime*10);
     }
 
     public bool HasShell() {
         return shell != null;
     }
-
     void IncreaseSize() {
         size++;
         // transform.localScale = ((Vector3) transform.localScale) + new Vector3(0.5f, 0.5f, 0);
-        targetSize += new Vector3(0.5f,0.5f,0);
+        // targetSize += new Vector3(0.5f,0.5f,0);
+        targetSize*=1.427f;
         if (shell) {
             shell.Drop();
             walk.Stop();

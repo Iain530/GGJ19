@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5328507413794025502}
   - component: {fileID: 4556603644211546444}
   m_Layer: 0
-  m_Name: shell_natural
+  m_Name: shell_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  fittingSize: 0
+  fittingSize: 1
 --- !u!95 &4556603644211546444
 Animator:
   serializedVersion: 3
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 3c6bea49debe74a12a86f6c10ebdb291, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c72e36a1f53945829ffcae55a118119, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
