@@ -46,6 +46,7 @@ public class CrabSize : MonoBehaviour {
         // targetSize += new Vector3(0.5f,0.5f,0);
         targetSize*=growStep;
         if (shell) {
+            TimerBar.duration = 10;
             shell.Drop();
             walk.Stop();
             run.Play();
@@ -78,5 +79,8 @@ public class CrabSize : MonoBehaviour {
         run.Stop();
         walk.Play();
         pickup.Play();
+
+        TimerBar.duration = 15;
+        TimerBar.Reset();
     }
 }
