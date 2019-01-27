@@ -19,6 +19,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &6988490946442578839
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972723202208591829}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.33018923, y: 7.7289743}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15.13211, y: 9.976065}
+  m_EdgeRadius: 0
+--- !u!114 &7432351789768262405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972723202208591829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04bef815b5ded8aa297a949c48a86de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2085637883896142093
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +203,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: bb1bb20c52f0745f88aca6909296d3c0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 297e4b9ea526efb4c8b587f9ae88ccdb, type: 2}
     - target: {fileID: 400006, guid: bb1bb20c52f0745f88aca6909296d3c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3577716
@@ -193,10 +235,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.99992263
       objectReference: {fileID: 0}
-    - target: {fileID: 21200000, guid: bb1bb20c52f0745f88aca6909296d3c0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 297e4b9ea526efb4c8b587f9ae88ccdb, type: 2}
     - target: {fileID: 11400000, guid: bb1bb20c52f0745f88aca6909296d3c0, type: 3}
       propertyPath: m_RootBone
       value: 
