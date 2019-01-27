@@ -351,6 +351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rb: {fileID: 3729161688401550094}
+  ani: {fileID: 0}
+  anihead: {fileID: 0}
 --- !u!114 &9129914065510876801
 MonoBehaviour:
   m_ObjectHideFlags: 0

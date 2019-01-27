@@ -9,6 +9,7 @@ public class CrabMovement : MonoBehaviour {
     public Rigidbody2D rb;
 
     private Vector2 velocity;
+	[SerializeField]
     private Animator ani, anihead;
 
     private float noShellSpeed = 1.3f;
@@ -19,8 +20,9 @@ public class CrabMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         size = GetComponent<CrabSize>();
         ani = transform.GetChild(1).GetComponent<Animator>();
-        anihead = transform.GetChild(1).GetComponentInChildren<Animator>();
+		anihead = transform.GetChild(1).GetChild(0).GetComponent<Animator>();
         particles = transform.GetChild(3).GetComponent<ParticleSystem>();
+		Debug.Log(anihead, ani);
     }
 
     void Update() {
