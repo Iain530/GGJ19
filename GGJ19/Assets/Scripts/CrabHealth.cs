@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CrabHealth : MonoBehaviour
 {
@@ -24,7 +25,8 @@ public class CrabHealth : MonoBehaviour
     {
         if (newHealth <= 0)
         {
-            //die
+            
+            SceneManager.LoadScene(2);
             return;
         }
         
