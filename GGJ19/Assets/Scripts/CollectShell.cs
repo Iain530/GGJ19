@@ -5,7 +5,7 @@ using UnityEngine;
 public class CollectShell : MonoBehaviour
 {
     public GameObject target;
-    
+    public AudioSource pickup;
     private bool dropped = false;
 
     // Update is called once per frame
